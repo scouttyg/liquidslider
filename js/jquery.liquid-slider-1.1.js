@@ -903,7 +903,7 @@ if (typeof Object.create !== 'function') {
 			var self = this,
 				currentPanelHeight;
 			// Cache the original height of the current panel
-			currentPanelHeight = height || $($(self.panelContainer).children()[self.panelHeightCount]).css('height').split('px')[0];
+			currentPanelHeight = height || $($(self.panelContainer).children()[self.panelHeightCount]).height();
 			// Create a new height based on the user settings (Beta)
 			self.setHeight = (self.options.autoHeightRatio) ?
 					(((self.$sliderWrap).outerWidth(true) / (self.options.autoHeightRatio).split(':')[1] * (self.options.autoHeightRatio).split(':')[0])) :
